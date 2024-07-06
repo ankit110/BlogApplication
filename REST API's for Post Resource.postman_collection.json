@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "ddcd83bf-1c36-4305-8ca7-f726b2b19ed4",
+		"name": "REST API's for Post Resource",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30302698"
+	},
+	"item": [
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"My new Post.\",\r\n    \"description\": \"My new Post description.\",\r\n    \"content\": \"This is my new Post.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2134/api/posts/createPost",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2134",
+					"path": [
+						"api",
+						"posts",
+						"createPost"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Post",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2134/api/posts?sortBy=id&sortDir=desc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2134",
+					"path": [
+						"api",
+						"posts"
+					],
+					"query": [
+						{
+							"key": "sortBy",
+							"value": "id"
+						},
+						{
+							"key": "sortDir",
+							"value": "desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get post By id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2134/api/posts/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2134",
+					"path": [
+						"api",
+						"posts",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Post",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"My new updated fifth Post.\",\r\n    \"description\": \"Fifth Updated Post description.\",\r\n    \"content\": \"This is my fifth new Post.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2134/api/posts/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2134",
+					"path": [
+						"api",
+						"posts",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2134/api/posts/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2134",
+					"path": [
+						"api",
+						"posts",
+						"6"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
